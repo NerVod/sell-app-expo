@@ -7,7 +7,7 @@ import colors from '../config/colors';
 
 function ListItems({title, subTitle, image, onPress, renderRightActions}) {
     return (
-        <GestureHandlerRootView>
+        <GestureHandlerRootView >
             <Swipeable renderRightActions={renderRightActions}>
                 <TouchableHighlight
                 underlayColor={colors.light}
