@@ -3,9 +3,9 @@ import { SafeAreaView, StyleSheet, Platform, StatusBar} from 'react-native'
 
 
 
-function Screen({ children }) {
+function Screen({ children, style }) {
     return (
-        <SafeAreaView style= {styles.screen}>
+        <SafeAreaView style={[styles.screen, style]}>
             {children}
         </SafeAreaView>
     );
