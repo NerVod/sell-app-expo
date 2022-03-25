@@ -4,7 +4,7 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import 'react-native-gesture-handler'
 
-import AppText from './app/components/AppText/AppText';
+import AppText from './app/components/AppText';
 import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
