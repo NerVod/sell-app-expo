@@ -11,13 +11,11 @@ function AppFormField({ name, ...otherProps }) {
     return (
         <>
          <AppTextInput 
-       
-                        onBlur={() =>setFieldTouched(name)}
-                        onChangeText={handleChange(name)}
-
-                        {...otherProps}
-                        />
-                        <ErrorMessage error={errors[name]} visible={touched[name]} />
+                onBlur={() =>setFieldTouched(name)}
+                onChangeText={handleChange(name)}
+                {...otherProps}
+                />
+            <ErrorMessage error={errors[name]} visible={touched[name]} />
         </>
     );
 }
