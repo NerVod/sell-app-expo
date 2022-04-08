@@ -1,16 +1,14 @@
 import React from 'react';
 import { Image, StyleSheet} from 'react-native';
 
-import {Formik } from 'formik';
 import * as Yup from 'yup';
 
-import AppButton from '../components/AppButton';
-import AppTextInput from '../components/AppTextInput';
-import ErrorMessage from '../components/ErrorMessage';
+
 import Screen from '../components/Screen';
-import AppFormField from '../components/AppFormField';
-import submitButton from '../components/submitButton';
-import AppForm from '../components/AppForm';
+import { AppForm, AppFormField, SubmitButton } from '../components/Forms';
+
+
+
 
 
 const validationSchema= Yup.object().shape({
@@ -47,7 +45,7 @@ function LoginScreen(props) {
                         textContentType="password"
                         />
 
-                        <submitButton title="login" />  
+                        <SubmitButton title="Login" color="primary" />
             </AppForm>
         </Screen>
     );
