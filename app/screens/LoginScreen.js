@@ -10,6 +10,7 @@ import ErrorMessage from '../components/ErrorMessage';
 import Screen from '../components/Screen';
 import AppFormField from '../components/AppFormField';
 import submitButton from '../components/submitButton';
+import AppForm from '../components/AppForm';
 
 
 const validationSchema= Yup.object().shape({
@@ -22,14 +23,12 @@ function LoginScreen(props) {
     return (
         <Screen style={styles.container}>
             <Image style={styles.logo} source={require("../assets/logo-red.png")}/>
-            <Formik
+            <AppForm
             initialValues={{ email: '', password:''}}
-            onSubmit={values => console.log(values)}
+            onSubmit={(values) => console.log(values)}
             validationSchema={validationSchema}
             >
-                { () => (
-                        <>
-                        <AppFormField 
+              <AppFormField 
                         autoCapitalize="none"
                         autoCorrect={false}
                         icon="email"
@@ -48,13 +47,8 @@ function LoginScreen(props) {
                         textContentType="password"
                         />
 
-                        <submitButton title="login" />
-                        
-                        
-                        </>
-
-                ) }
-            </Formik>
+                        <submitButton title="login" />  
+            </AppForm>
         </Screen>
     );
 }
