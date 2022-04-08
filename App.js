@@ -18,12 +18,12 @@ import Screen from "./app/components/Screen";
 import { Switch } from "react-native";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
-
+import RegisterScreen from "./app/screens/RegisterScreen";
 
 
 
 export default function App() {
 return (
-    <LoginScreen />
+    <RegisterScreen />
     );
 }
