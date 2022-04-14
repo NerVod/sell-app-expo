@@ -24,7 +24,7 @@ function AppPicker({ icon, items,onSelectItem, placeholder, selectedItem  }) {
                         color={defaultStyles.colors.medium} 
                         style={styles.icon} 
                     />
-                    )}
+                    )}                  
                     {selectedItem ? (
                         <AppText style={styles.text}>{selectedItem.label}</AppText> 
                     ) : (
