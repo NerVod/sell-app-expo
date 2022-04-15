@@ -3,6 +3,8 @@ import { StyleSheet } from 'react-native';
 
 import * as Yup from 'yup';
 import AppPicker from '../components/AppPicker';
+import CategoryPickerItem from '../components/CategoryPickerItem';
+
 
 import { AppForm, AppFormField, AppFormPicker, SubmitButton } from '../components/Forms';
 import Screen from '../components/Screen';
@@ -15,9 +17,15 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-    { label: "Furniture", value: 1 },
-    { label: "Clothing", value: 2 },
-    { label: "Camera", value: 3 },
+    { label: "Furniture", value: 1, backgroundColor:'#fc5c65', icon:'floor-lamp' },
+    { label: "Clothing", value: 2, backgroundColor:'#fd9644', icon:'shoe-heel' },
+    { label: "Cameras", value: 3, backgroundColor:'#fed330', icon:'camera' },
+    { label: "Games", value: 4, backgroundColor:'#26de81', icon:'cards' },
+    { label: "Sport", value: 5, backgroundColor:'#2bcbba', icon:'basketball' },
+    { label: "Movies & Music", value: 6, backgroundColor:'#45aaf2', icon:'headphones' },
+    { label: "Books", value: 7, backgroundColor:'#4b7bec', icon:'book-open-variant' },
+    { label: "Cars", value: 8, backgroundColor:'#a55eea', icon:'car' },
+    { label: "Other", value: 9, backgroundColor:'#778ca3', icon:'application' },
 ];
 
 function ListingEditScreen() {
@@ -41,7 +49,13 @@ function ListingEditScreen() {
                     placeholder={"Price"}
                     width={120}
                 />
-                <AppPicker items={categories} name="category" placeholder="Category" width="50%" />
+                <AppPicker 
+                    items={categories} 
+                    numberOfColumns={3}
+                    name="category"
+                    PickerItemComponent={CategoryPickerItem} 
+                    placeholder="Category" 
+                    width="50%" />
                 <AppFormField 
                     maxLength={255}
                     multiline
