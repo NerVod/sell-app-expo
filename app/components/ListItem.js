@@ -5,8 +5,13 @@ import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler'
 
 import AppText from '../components/AppText';
 import colors from '../config/colors';
+import ShowHide from './ShowHide';
 
-function ListItems({title, subTitle, image, IconComponent, onPress, renderRightActions}) {
+function ListItems({title, subTitle, image, IconComponent, onPress, renderRightActions, showChevrons}) {
+
+  
+
+
     return (
         <GestureHandlerRootView >
             <Swipeable renderRightActions={renderRightActions}>
@@ -20,7 +25,11 @@ function ListItems({title, subTitle, image, IconComponent, onPress, renderRightA
                             <AppText style={styles.title}>{title}</AppText>
                             {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
                         </View>
-                        <MaterialCommunityIcons color={colors.medium}name='chevron-right' size={25}></MaterialCommunityIcons>
+                      
+                        <ShowHide showChevrons={showChevrons}>
+                            <MaterialCommunityIcons  color={colors.medium} name='chevron-right' size={25}></MaterialCommunityIcons>
+                        </ShowHide>
+                        
                     </View>
                 </TouchableHighlight>
             </Swipeable>
