@@ -19,6 +19,7 @@ function ListingDetailsScreen(props) {
                         image={require("../assets/benj.jpg")}
                         title="Benjamin Jeannerot"
                         subTitle="5 Listings"
+                        showChevrons={true}
                     />
                 </View>
             </View>
